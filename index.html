@@ -9,7 +9,7 @@
       font-size: 14pt;
       line-height: 1.6;
       color: #333;
-      max-width: 1000px;
+      max-width: 1100px;
       margin: 0 auto;
       padding: 20px;
     }
@@ -17,22 +17,37 @@
       font-size: 24pt;
       color: #2c3e50;
       text-align: center;
-      border-bottom: 3px solid #ccc;
-      padding-bottom: 10px;
+      margin-top: 0;
+    }
+    h2 {
+      font-size: 18pt;
+      color: #34495e;
+      text-align: center;
+      margin-bottom: 15px;
     }
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 30px;
+      margin-top: 20px;
     }
     th, td {
       border: 1px solid #555;
-      padding: 12px;
+      padding: 8px 12px;
       text-align: left;
+      vertical-align: top;
     }
     th {
       background-color: #f0f0f0;
       font-weight: bold;
+      text-align: center;
+    }
+    /* Вертикальная ячейка с днями недели */
+    .day-cell {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      width: 40px;
+      text-align: center;
+      padding: 5px;
     }
     a {
       text-decoration: none;
@@ -42,64 +57,116 @@
     a:hover {
       text-decoration: underline;
     }
-    .table-container {
-      overflow-x: auto;
-    }
     .footer {
       margin-top: 30px;
       font-size: 12pt;
       color: #666;
+      text-align: center;
     }
   </style>
 </head>
 <body>
 
-  <h1>Расписание занятий кафедры ПОИТ</h1>
+  <h1>Расписание занятий с 04/01/2017</h1>
+  <h2>Кафедра ПОИТ</h2>
 
-  <div class="table-container">
-    <table>
-      <thead>
-        <tr>
-          <th>Предмет</th>
-          <th>Преподаватель</th>
-          <th>Группа</th>
-          <th>Аудитория</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><a href="graphics.html">Компьютерная графика</a></td>
-          <td>Петров П.П.</td>
-          <td>ПОИТ-01</td>
-          <td>305</td>
-        </tr>
-        <tr>
-          <td><a href="networks.html">Компьютерные сети</a></td>
-          <td>Сидоров С.С.</td>
-          <td>ПОИТ-32</td>
-          <td>412</td>
-        </tr>
-        <tr>
-          <td><a href="informatics.html">Информатика</a></td>
-          <td>Курочка С.П.</td>
-          <td>ПОИТ-01</td>
-          <td>201</td>
-        </tr>
-        <tr>
-          <td><a href="algorithms.html">Алгоритмизация</a></td>
-          <td>Дмитриев Д.Д.</td>
-          <td>ПОИТ-32</td>
-          <td>301</td>
-        </tr>
-        <tr>
-          <td><a href="design.html">Проектирование</a></td>
-          <td>Сергеенко С.С.</td>
-          <td>ПОИТ-01</td>
-          <td>405</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+  <table>
+    <thead>
+      <tr>
+        <th class="day-cell">День недели</th>
+        <th style="width: 120px;">Время</th>
+        <th colspan="2" style="text-align: center;">2 курс</th>
+      </tr>
+      <tr>
+        <th></th>
+        <th></th>
+        <th style="background-color: #f9f9f9; text-align: center;">ПОИТ-01</th>
+        <th style="background-color: #f9f9f9; text-align: center;">ПОИТ-02</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td rowspan="3" class="day-cell">Понедельник</td>
+        <td>9<sup>00</sup> — 11<sup>00</sup></td>
+        <td>
+          <a href="databases.html">Базы данных</a><br>
+          Иванов И.И.<br>
+          ауд. 412
+        </td>
+        <td>
+          <a href="graphics.html">Компьютерная графика</a><br>
+          Петров П.П.<br>
+          ауд. 414
+        </td>
+      </tr>
+      <tr>
+        <td>11<sup>10</sup> — 13<sup>10</sup></td>
+        <td>
+          <a href="networks.html">Компьютерные сети</a><br>
+          Сидоров С.С.<br>
+          ауд. 508
+        </td>
+        <td>
+          <a href="informatics.html">Информатика</a><br>
+          Курочка С.П.<br>
+          ауд. 506
+        </td>
+      </tr>
+      <tr>
+        <td>13<sup>20</sup> — 14<sup>20</sup></td>
+        <td>
+          <a href="informatics.html">Информатика</a><br>
+          Курочка С.П.<br>
+          ауд. 506
+        </td>
+        <td>
+          <a href="networks.html">Компьютерные сети</a><br>
+          Сидоров С.С.<br>
+          ауд. 508
+        </td>
+      </tr>
+      <tr>
+        <td rowspan="3" class="day-cell">Вторник</td>
+        <td>15<sup>30</sup> — 17<sup>30</sup></td>
+        <td>
+          <a href="algorithms.html">Алгоритмизация</a><br>
+          Дмитриев Д.Д.<br>
+          ауд. 202
+        </td>
+        <td>
+          <a href="design.html">Проектирование</a><br>
+          Сергеенко С.С.<br>
+          ауд. 412
+        </td>
+      </tr>
+      <tr>
+        <td>17<sup>40</sup> — 19<sup>40</sup></td>
+        <td>
+          <a href="design.html">Проектирование</a><br>
+          Сергеенко С.С.<br>
+          ауд. 412
+        </td>
+        <td>
+          <a href="algorithms.html">Алгоритмизация</a><br>
+          Дмитриев Д.Д.<br>
+          ауд. 202
+        </td>
+      </tr>
+      <tr>
+        <td>19<sup>50</sup> — 21<sup>50</sup></td>
+        <td>
+          <a href="graphics.html">Компьютерная графика</a><br>
+          Петров П.П.<br>
+          ауд. 414
+        </td>
+        <td>
+          <a href="databases.html">Базы данных</a><br>
+          Иванов И.И.<br>
+          ауд. 412
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
   <p class="footer">
     &copy; Все права защищены. 2016 год
